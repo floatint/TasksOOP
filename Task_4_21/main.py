@@ -12,15 +12,18 @@
 import sys
 import logic
 import utils
+import arg_init
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Data file not defined by argv.")
-        exit(1)
+    arg_parser = arg_init.init_arg_parser()
+    args = vars(arg_parser.parse_args())
+    # if len(sys.argv) < 2:
+    #     print("Data file not defined by argv.")
+    #     exit(1)
     word_size = int(input("Enter word size :"))
 
     try:
-        words = utils.load_data(sys.argv[1])
+        words = utils.load_data(args['in'])
     except Exception as e:
         print("Data load error : " + str(e))
         exit(2)
@@ -39,5 +42,6 @@ if __name__ == "__main__":
         print("Not found")
         exit(5)
     print(processed)
+    utils.save_data(args['out'], processed)
 
 

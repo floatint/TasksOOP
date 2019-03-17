@@ -3,159 +3,101 @@
 # logic module
 
 
-class ShapeFinder:
-
-    # __found_list = []  # фигура = [y, x, h, w, p]
-
-    def __init__(self, dl):
-        if len(dl) == 0:
-            raise Exception("Data processing error")
-        self._data = dl
-
-    @staticmethod
-    def __is_shape_exist(y, x, founded):
-        for shape in founded:
-            if ((x >= shape[1]) and (x <= shape[1] + shape[3] - 1)) and \
+def is_shape_exist(y, x, found):
+    for shape in found:
+        if ((x >= shape[1]) and (x <= shape[1] + shape[3] - 1)) and \
                 ((y >= shape[0]) and (y <= shape[0] + shape[2] - 1)):
-                return True
-            else:
-                continue
-        return False
+            return True
+    return False
 
-    def _is_point_in_range(self, y, x):
-        return ((x >= 0) and (x < len(self._data[0]))) and ((y >= 0) and (y < len(self._data)))
 
-    """
-    def q(self):
-        for i in range(x0, x0+width):
-            yield (i, y0)
-        for i in range(y0, y0+h):
-            yield (y0, i)
-        for i in range(x0, x0+width):
-            yield (i, y0)
-        for i in range(x0, x0+width):
-            yield (i, y0)"""
-    def _is_shape_isolated(self, shape):
-        # shape format = [y, x, h, w, p]
+def is_point_in_range(data, y, x):
+    return ((x >= 0) and (x < len(data[0]))) and ((y >= 0) and (y < len(data)))
 
-        y = shape[0] - 1
-        x = shape[1] - 1
-        h = shape[2]
-        w = shape[3]
 
-        # проверим сверху
-        dist = w + 1
-        while dist > 0:
-            if not self._is_point_in_range(y, x):
-                dist -= 1
-                x += 1
-                continue
-            if self._data[y][x]:
-                return False
-            else:
-                dist -= 1
-                x += 1
-        # проверим право
-        dist = h + 1
-        while dist > 0:
-            if not self._is_point_in_range(y, x):
-                dist -= 1
-                y += 1
-                continue
-            if self._data[y][x]:
-                return False
-            else:
-                dist -= 1
-                y += 1
-        # проверим низ
-        dist = w + 1
-        while dist > 0:
-            if not self._is_point_in_range(y, x):
-                dist -= 1
-                x -= 1
-                continue
-            if self._data[y][x]:
-                return False
-            else:
-                dist -= 1
-                x -= 1
-        # проверим лево
-        dist = h + 2
-        while dist > 0:
-            if not self._is_point_in_range(y, x):
-                dist -= 1
-                y -= 1
-                continue
-            if self._data[y][x]:
-                return False
-            else:
-                dist -= 1
-                y -= 1
-        return True
+def find_shape(data):
+    found_shapes = []
+    for y, yv in enumerate(data):
+        for x, xv in enumerate(yv):
+            # если точка тру и она не часть другой фигуры
+            if data[y][x] and (not is_shape_exist(y, x, found_shapes)):
+                h = 0
+                w = 0
+                cury = y
+                curx = x
+                # прпробуем найти ширину первой строки
+                while curx < len(data[y]) and data[cury][curx]:
+                    w += 1
+                    curx += 1
+                # теперь пробуем пройти в глубину, пытаясь найти строки длиной w
+                while cury < len(data):
+                    curx = x
+                    neww = 0
+                    while curx < len(data[cury]) and data[cury][curx]:
+                        neww += 1
+                        curx += 1
+                    # если строка такого же размера как эталон, то увеличиваем высоту
+                    if neww == w:
+                        h += 1
+                        cury += 1
+                    else:
+                        break
+                # found_shapes.append([y, x, h, w, h*w])
+                # должны найти хотя бы 1 фигуру
+                # теперь можно проверить и на изолированность
 
-    def _get_shape(self, y, x, founded):
-        # проверим, принадлежит ли (x,y) к найденным фигурам
-        # если такой фигуры нет вернем ничего
-        if self.__is_shape_exist(y, x, founded):
-            return None
-        # поиск
-        # сторим исходные x, y
-        old_x = x
-        old_y = y
-        # заполняем хар-ки
-        p = 0
-        w = 0
-        h = 0
-        # пытаемся пройти в ширину
-        t = self._data[y][x]
-        o = len(self._data)
-        while (x < len(self._data[0])) and (self._data[y][x]):
-            w += 1
-            x += 1
-        # рестор
-        x = old_x
-        # проход в глубь
-        while (y < len(self._data)) and (self._data[y][x]):
-            h += 1
-            y += 1
-        y = old_y
-        p = w * h
-        return tuple([y, x, h, w, p])
+                # установим начальную точку в левый верхний угол
+                curx = x - 1
+                cury = y - 1
+                # сколько клеток надо проверить
+                distance = w + 1
+                while distance > 0:
+                    if not is_point_in_range(data, cury, curx) or not data[cury][curx]:
+                        distance -= 1
+                        curx += 1
+                    else:
+                        break
+                # сверху изолирована ?
+                if distance != 0:
+                    continue
+                distance = h + 1
+                while distance > 0:
+                    if not is_point_in_range(data, cury, curx) or not data[cury][curx]:
+                        distance -= 1
+                        cury += 1
+                    else:
+                        break
+                # справа изолирована ?
+                if distance != 0:
+                    continue
+                distance = w + 1
+                while distance > 0:
+                    if not is_point_in_range(data, cury, curx) or not data[cury][curx]:
+                        distance -= 1
+                        curx -= 1
+                    else:
+                        break
+                # снизу изолирована ?
+                if distance != 0:
+                    continue
+                distance = h + 1
+                while distance > 0:
+                    if not is_point_in_range(data, cury, curx) or not data[cury][curx]:
+                        distance -= 1
+                        cury -= 1
+                    else:
+                        break
 
-    def find_shapes(self):
-        founded = []
-        for y, yv in enumerate(self._data):
-            for x, xv in enumerate(yv):
-                if xv:
-                    new_shape = self._get_shape(y, x, founded)
-                    if new_shape is not None:
-                        founded.append(new_shape)
-        # получим изолированные
-        isol_shapes = [iss for iss in founded if self._is_shape_isolated(iss)]
-        """isol_shapes =[]
-        for s in self.__found_list:
-            if self.__is_shape_isolated(s):
-                isol_shapes.append(s)"""
-        if len(isol_shapes) == 0:
-            return tuple([-1, -1, -1, -1])
-        # если нашли несколько
-        # найдем все максимальные
-        max_shapes = [s for s in isol_shapes if s[4] == max(isol_shapes, key=lambda sp: sp[4])[4]]
-        # из них все верхние
-        top_shapes = [s for s in max_shapes if s[0] == min(max_shapes, key=lambda sp: sp[0])[0]]
-        # из них самые левый
-        left_shape = [s for s in top_shapes if s[1] == min(top_shapes, key=lambda sp: sp[1])[1]][0]
-        """max_shape = max(isol_shapes, key=lambda f: f[4])
-        max_shapes.append(max_shape)
-        isol_shapes.remove(max_shape)
-        max_shape = max(isol_shapes, key=lambda f: f[4])
-        if max_shape[4] == max_shapes[0][4]:
-            max_shapes.append(max_shape)
-
-        if len(max_shapes) == 1:
-            return max_shapes
-
-        # вернем сначала верхний а потом левый
-
-        return [min(max_shapes, key=lambda f: f[0]), min(max_shapes, key=lambda f: f[1])]"""
-        return tuple(left_shape)
+                if distance == 0:
+                    # зафиксируем
+                    found_shapes.append([y, x, h, w, h * w])
+    if len(found_shapes) == 0:
+        return tuple([-1, -1, -1, -1])
+    # после того как нашли все изолированные
+    # отберем с макс. площадью
+    result = [s for s in found_shapes if s[4] == max(found_shapes, key=lambda sp: sp[4])[4]]
+    # отберем верхние
+    result = [s for s in result if s[0] == min(result, key=lambda sp: sp[0])[0]]
+    # отберем самую левую
+    result = [s for s in result if s[1] == min(result, key=lambda sp: sp[1])[1]][0]
+    return result

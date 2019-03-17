@@ -34,13 +34,12 @@ if __name__ == "__main__":
     # logic
 
     try:
-        sf = logic.ShapeFinder(data)
-        result = sf.find_shapes()
+        shape = logic.find_shape(data)
     except Exception as e:
         print("Data processing error : " + str(e))
         exit(3)
 
-    print(result)
+    print(shape)
 
 
 

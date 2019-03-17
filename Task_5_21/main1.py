@@ -24,8 +24,7 @@ if __name__ == "__main__":
     # logic
 
     try:
-        sf = logic1.ShapeFinderEx(data)
-        result = sf.find_shapes()
+        result = logic1.find_shape(data)
     except Exception as e:
         print("Data processing error : " + str(e))
         exit(3)

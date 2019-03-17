@@ -29,7 +29,7 @@ if __name__ == "__main__":
             print("Data load")
             segments = utils.load_data("test_{0}.txt".format(i))
             print("Processing")
-            result = logic.get_union(segments)
+            result = logic.get_unions(segments)
             print("Result : ", result)
             print("======================================")
     except Exception as e:
