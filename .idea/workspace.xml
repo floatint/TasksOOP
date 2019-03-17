@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6b1c37cd-e22e-43ae-a60a-5c6a2508e533" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Task_2_21/data_t.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_4_21/arg_init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_5_21/data_t.txt" afterDir="false" />
+    <list default="true" id="6b1c37cd-e22e-43ae-a60a-5c6a2508e533" name="Default Changelist" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_2_21/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_2_21/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_2_21/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_2_21/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_3_21/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3_21/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_3_21/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3_21/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_3_21/segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3_21/segment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_5_21/logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_5_21/logic1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_5_21/main1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_5_21/main1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -36,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -244,6 +231,14 @@
       <option name="presentableId" value="Default" />
       <updated>1550076651782</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1552856474085</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552856474085</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -267,6 +262,10 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
