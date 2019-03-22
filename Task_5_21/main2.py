@@ -1,20 +1,13 @@
-# -*- coding: utf-8 -*-
-
-"""
-
-21.	Выбрать (в виде списка) без повторений из текста все слова заданной длины. Словом считается непрерывная последовательность
-символов (строчных и прописных) А-Я, A-Z и цифр.
-
-"""
-
-import logic
+import logic2
 import utils
 import arg_init
 
 if __name__ == "__main__":
     arg_parser = arg_init.init_arg_parser()
     args = arg_parser.parse_args()
-
+    # if len(sys.argv) < 2:
+    #     print("Data file not defined by argv.")
+    #     exit(1)
     word_size = args.size
     if not word_size:
         word_size = int(input("Enter word size :"))
@@ -30,7 +23,8 @@ if __name__ == "__main__":
         exit(3)
 
     try:
-        processed = logic.select_words(words, word_size)
+        processor = logic2.unique_words(logic2.select_words)
+        processed = processor(words, word_size)
     except Exception as e:
         print("Data processing error : " + str(e))
         exit(4)

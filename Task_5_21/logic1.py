@@ -4,7 +4,6 @@
 
 
 def raw(w, h, y, x):
-    # top
     curx = x
     cury = y
     # top

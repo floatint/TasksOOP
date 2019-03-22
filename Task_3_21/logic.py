@@ -5,6 +5,10 @@
 import segment
 
 
+def is_seg_intersection(seg1, seg2):
+    return seg1.x2 - seg2.x1 > 0
+
+
 def get_unions(segments):
     if len(segments) == 1:
         return segments[0]
@@ -14,10 +18,10 @@ def get_unions(segments):
     while len(segments) != 1:
         seg1 = segments.pop()
         seg2 = segments.pop()
-        if seg1 in seg2:
+        if seg2 in seg1:
             segments.append(seg2)
         else:
-            if seg1.x2 - seg2.x1 > 0:
+            if is_seg_intersection(seg1, seg2):
                 segments.append(segment.Segment(seg1.x1, seg2.x2))
             else:
                 segments.append(seg2)

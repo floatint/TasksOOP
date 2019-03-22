@@ -13,7 +13,8 @@ class Segment:
 
     # in
     def __contains__(self, other):
-        return (self.x1 <= other.x1) and (self.x2 <= other.x2)
+        return (self.x1 >= other.x1) and (other.x2 >= self.x2)
+        # return (self.x1 <= other.x1) and (self.x2 <= other.x2)
 
     # for iterable print()
     def __repr__(self):
