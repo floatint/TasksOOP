@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b1c37cd-e22e-43ae-a60a-5c6a2508e533" name="Default Changelist" comment="Update">
-      <change afterPath="$PROJECT_DIR$/Task_5_21/arg_init.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_5_21/logic2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_5_21/main2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_5_21/test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Task_5_21/utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_7_21/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_7_21/logic.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_7_21/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_7_21/pages/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_7_21/static/route.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_7_21/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_3_21/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3_21/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_3_21/segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_3_21/segment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/arg_init.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/arg_init.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_4_21/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task_4_21/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_5_21/logic1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_5_21/logic1.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -67,10 +62,19 @@
         <option value="$PROJECT_DIR$/Task_5_21/logic2.py" />
         <option value="$PROJECT_DIR$/Task_4_21/main.py" />
         <option value="$PROJECT_DIR$/Task_4_21/logic.py" />
+        <option value="$PROJECT_DIR$/Task_7_21/styles/main.css.py" />
+        <option value="$PROJECT_DIR$/Task_7_21/styles/main.css" />
+        <option value="$PROJECT_DIR$/Task_7_21/config.py" />
+        <option value="$PROJECT_DIR$/Task_7_21/scripts/route.js" />
+        <option value="$PROJECT_DIR$/Task_7_21/static/route.js" />
+        <option value="$PROJECT_DIR$/Task_7_21/pages/main.html" />
+        <option value="$PROJECT_DIR$/Task_7_21/utils.py" />
+        <option value="$PROJECT_DIR$/Task_7_21/main.py" />
+        <option value="$PROJECT_DIR$/Task_7_21/logic.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="405" />
     <option name="y" value="120" />
     <option name="width" value="725" />
@@ -82,6 +86,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -93,10 +98,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -119,7 +124,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_4">
+  <component name="RunManager" selected="Python.main_7">
     <configuration name="main_1" type="PythonConfigurationType" factoryName="Python">
       <module name="Tasks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -246,6 +251,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_7" type="PythonConfigurationType" factoryName="Python">
+      <module name="Tasks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Task_7_21" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Task_7_21/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.main_1" />
       <item itemvalue="Python.main_2" />
@@ -253,6 +279,7 @@
       <item itemvalue="Python.main_4" />
       <item itemvalue="Python.main_5_1" />
       <item itemvalue="Python.main_5_2" />
+      <item itemvalue="Python.main_7" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -277,15 +304,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1698612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16931638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32719547" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.38243628" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32718894" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3813364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -319,9 +346,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Task_1_21/test.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Task_2_21/data.txt" />
     <entry file="file://$PROJECT_DIR$/Task_1_21/utils.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -375,13 +399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
@@ -574,6 +591,84 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Task_5_21/arg_init.py">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/styles/main.css.py" />
+    <entry file="file://$PROJECT_DIR$/Task_7_21/styles/main.css" />
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python/Python37/Lib/site-packages/werkzeug/serving.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="359" selection-start-line="359" selection-end-line="359" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python/Python37/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/pages/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/static/route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="e#36#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_7_21/logic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

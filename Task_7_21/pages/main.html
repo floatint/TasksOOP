@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер валют</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='route.js') }}"></script>
+</head>
+
+<body>
+    <!-- Список валют -->
+    <select id="fromValutes" onchange="change_val()">
+        {% for i in valutes %}
+        <option>{{ i }}</option>
+        {% endfor %}
+    </select>
+    <textarea style="vertical-align: middle;" id="fromVal" rows="1" cols="30"></textarea>
+    <br>
+    <select id="toValutes" onchange="change_val()">
+        {% for i in valutes %}
+        <option>{{ i }}</option>
+        {% endfor %}
+    </select>
+    <textarea style="vertical-align: middle;" readonly id="toVal" rows="1" cols="30"></textarea>
+    <br>
+    <button name="runBtn" onclick="convert()">Convert</button>
+</body>
+</html>
