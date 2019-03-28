@@ -4,6 +4,18 @@ cirillic_upper = "АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭ
 cirillic_lower = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя"
 
 
+def unique_words_dec(size_filter):
+    def unique_internal(data, word_size):
+        sized_words = size_filter(data, word_size)
+        result = []
+        for i in range(len(sized_words)):
+            if not sized_words[i] in result:
+                result.append(sized_words[i])
+        return result
+    return unique_internal
+
+
+@unique_words_dec
 def select_words(buffer, wordsize):
     tmp = ''
     newlist = []
@@ -19,14 +31,3 @@ def select_words(buffer, wordsize):
                             continue
         tmp += c
     return newlist
-
-
-def unique_words(size_filter):
-    def unique_internal(data, word_size):
-        sized_words = size_filter(data, word_size)
-        result = []
-        for i in range(len(sized_words)):
-            if not sized_words[i] in result:
-                result.append(sized_words[i])
-        return result
-    return unique_internal

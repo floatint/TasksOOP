@@ -23,8 +23,9 @@ if __name__ == "__main__":
         exit(3)
 
     try:
-        processor = logic2.unique_words(logic2.select_words)
-        processed = processor(words, word_size)
+        processed = logic2.select_words(words, word_size)
+        # processor = logic2.unique_words(logic2.select_words)
+        # processed = processor(words, word_size)
     except Exception as e:
         print("Data processing error : " + str(e))
         exit(4)
