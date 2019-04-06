@@ -23,7 +23,7 @@ if __name__ == "__main__":
         exit(3)
 
     try:
-        processed = logic2.select_words(words, word_size)
+        processed = logic2.select_words(size=word_size, data=words)
         # processor = logic2.unique_words(logic2.select_words)
         # processed = processor(words, word_size)
     except Exception as e:

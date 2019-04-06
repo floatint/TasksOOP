@@ -1,23 +1,22 @@
 function convert() {
-        var valsList = document.getElementById("fromValutes");
+        var valsList = $('#fromValutes')[0];
         var val1_name = valsList.options[valsList.selectedIndex].value;
-        valsList = document.getElementById("toValutes");
+        valsList = $("#toValutes")[0];
         var val2_name = valsList.options[valsList.selectedIndex].value;
-        var inputArea = document.getElementById("fromVal");
+        var inputArea = $('#fromVal')[0];
         var count = inputArea.value;
     $.ajax({
         type: "POST",
         url: '/convert',
         data: {'val1_name': val1_name, 'val2_name': val2_name, 'count': count},
-        type: 'POST',
         success: function(response) {
-            if (response["error"] == true){
-                alert("Processing error. " + response["answer"]);
-                document.getElementById("fromVal").value = null;
-                document.getElementById("toVal").value = null;
-                exit;
-                }
-            $('#toVal').val(response["answer"])
+            if (response.error){
+                alert("Processing error. " + response.message);
+                $('#fromVal')[0].value = null;
+                $('#toVal')[0].value = null;
+                return;
+            }
+            $('#toVal')[0].text = response['answer'] + response['answer'];
             console.log(response);
         },
         error: function(error) {
