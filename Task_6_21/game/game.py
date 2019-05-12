@@ -72,7 +72,7 @@ class Game:
         # возможные значеия итемов
         for y in range(len(field)):
             for x in range(len(field[0])):
-                field[y][x].value = random.choice()
+                field[y][x].value = random.choice(Game.item_values())
         # получим список готовых последовательностей
         seqs = []
         # по строкам
