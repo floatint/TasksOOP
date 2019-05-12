@@ -21,6 +21,11 @@ class Game:
     def size(self):
         return dict({'width': self.__w, 'height': self.__h})
 
+    # Возможные значения для итемов
+    @staticmethod
+    def item_values():
+        return [0, 1, 2]
+
     # Возвращает возможные шаги
     @property
     def steps(self):
@@ -65,10 +70,9 @@ class Game:
     @staticmethod
     def __fill_field(field):
         # возможные значеия итемов
-        vals = [0, 1, 2]
         for y in range(len(field)):
             for x in range(len(field[0])):
-                field[y][x].value = random.choice(vals)
+                field[y][x].value = random.choice()
         # получим список готовых последовательностей
         seqs = []
         # по строкам
@@ -80,10 +84,10 @@ class Game:
             for i in seqs:
                 if i[3] == 0:
                     for v in range(i[1]+i[2]):
-                        field[i[0]][v].value = random.choice(vals)
+                        field[i[0]][v].value = random.choice(Game.item_values())
                 if i[3] == 1:
                     for v in range(i[0] + i[2]):
-                        field[v][i[1]].value = random.choice(vals)
+                        field[v][i[1]].value = random.choice(Game.item_values())
             seqs.clear()
             # по строкам
             [seqs.append(i) for i in Game.fnd_seq(field, sf.RowSequenceFmt)]
@@ -124,7 +128,7 @@ class Game:
         else:
             newfield = copy.deepcopy(self.__field)
 
-        row = ls.get_available_row(newfield, y, x)#le.RowExtractor.extract(newfield, y, x)
+        row = ls.get_available_row(newfield, y, x)
         if not row:
             return
 
@@ -160,7 +164,7 @@ class Game:
         else:
             newfield = copy.deepcopy(self.__field)
 
-        col = ls.get_available_column(newfield, y, x)#le.ColumnExtractor.extract(newfield, y, x)
+        col = ls.get_available_column(newfield, y, x)
         if not col:
             return
 
@@ -204,7 +208,6 @@ class Game:
 
     # Применяем шаги
     def apply(self):
-        vals = [0, 1, 2]
         # Удаляем
         deleted = []
         for seq in self.__sequences:
@@ -222,7 +225,7 @@ class Game:
                         for i in range(seq[0], col[0], -1):
                             self.__new_field[i][x].value = self.__new_field[i-1][x].value
                         # докинули сверху
-                        self.__new_field[col[0]][x].value = random.choice(vals)
+                        self.__new_field[col[0]][x].value = random.choice(Game.item_values())
                 # шаг по вертикали
                 if seq[3] == 1:
                     for y in range(seq[0], seq[0] + seq[2]):
@@ -231,7 +234,7 @@ class Game:
                     col = ls.get_available_column(self.__new_field, seq[0], seq[1])
                     for y in range(col[0], seq[0]):
                         self.__new_field[y + seq[2]][seq[1]].value = self.__new_field[y][seq[1]].value
-                        self.__new_field[y][seq[1]].value = random.choice(vals)
+                        self.__new_field[y][seq[1]].value = random.choice(Game.item_values())
 
         # разобьем вновь образовавшиеся готовые послед.
         seqs = []
@@ -244,10 +247,10 @@ class Game:
             for i in seqs:
                 if i[3] == 0:
                     for v in range(i[1]+i[2]):
-                        self.__new_field[i[0]][v].value = random.choice(vals)
+                        self.__new_field[i[0]][v].value = random.choice(Game.item_values())
                 if i[3] == 1:
                     for v in range(i[0] + i[2]):
-                        self.__new_field[v][i[1]].value = random.choice(vals)
+                        self.__new_field[v][i[1]].value = random.choice(Game.item_values())
             seqs.clear()
             # по строкам
             [seqs.append(i) for i in Game.fnd_seq(self.__new_field, sf.RowSequenceFmt)]
