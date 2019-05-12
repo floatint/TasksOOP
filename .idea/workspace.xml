@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6b1c37cd-e22e-43ae-a60a-5c6a2508e533" name="Default Changelist" comment="Update">
+      <change afterPath="$PROJECT_DIR$/Task_6_21/game/game.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/game/gameitem.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/game/logic_support.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/game/seqformatter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/game/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/levels/level_1.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/levels/level_2.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/levels/level_3.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/levels/level_4.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/levels/level_5.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/lvldesign.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/mainwindow.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/ui/compile_ui.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/ui/lvldesign.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/ui/main.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/ui/ui_lvldesign.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_6_21/ui/ui_mainwindow.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_5_21/logic2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_5_21/logic2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_5_21/main2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_5_21/main2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_5_21/result.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Task_5_21/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_7_21/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_7_21/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_7_21/logic.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_7_21/logic.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_7_21/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_7_21/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_7_21/pages/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/Task_7_21/pages/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_7_21/static/route.js" beforeDir="false" afterPath="$PROJECT_DIR$/Task_7_21/static/route.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task_7_21/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Task_7_21/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,6 +82,18 @@
         <option value="$PROJECT_DIR$/Task_5_21/logic2.py" />
         <option value="$PROJECT_DIR$/Task_7_21/logic.py" />
         <option value="$PROJECT_DIR$/Task_7_21/utils.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/gameitem.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/utils.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/seqfinder.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/ui/ui_mainwindow.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/ui_mainwindow.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/ui_lvldesign.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/main.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/lineextractor.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/game.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/ui/build.bat" />
+        <option value="$PROJECT_DIR$/Task_6_21/mainwindow.py" />
+        <option value="$PROJECT_DIR$/Task_6_21/lvldesign.py" />
       </list>
     </option>
   </component>
@@ -88,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,7 +121,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -112,6 +133,10 @@
       <recent name="C:\Users\User\Desktop\Nuznich\Tasks\Task_5_21" />
       <recent name="C:\Users\User\Desktop\OOPWORK\Tasks\Task_5_21" />
       <recent name="C:\Users\User\Desktop\OOP\Tasks\Task_5_21" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\OOP\Tasks\Task_6_21\game" />
+      <recent name="F:\OOP\Tasks\Task_6_21\ui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -126,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_5_2">
+  <component name="RunManager" selected="Python.main_6">
     <configuration name="main_1" type="PythonConfigurationType" factoryName="Python">
       <module name="Tasks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -253,6 +278,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main_6" type="PythonConfigurationType" factoryName="Python">
+      <module name="Tasks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Task_6_21" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Task_6_21/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main_7" type="PythonConfigurationType" factoryName="Python">
       <module name="Tasks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -282,6 +328,7 @@
       <item itemvalue="Python.main_5_1" />
       <item itemvalue="Python.main_5_2" />
       <item itemvalue="Python.main_7" />
+      <item itemvalue="Python.main_6" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -317,12 +364,12 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16931638" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2209857" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32718894" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27073732" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3813364" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -349,36 +396,17 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Task_2_21/data.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_1_21/utils.py" />
-    <entry file="file://$PROJECT_DIR$/Task_2_21/data_1.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_2_21/data_2.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_5_21/data_1.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_3_21/utils.py" />
-    <entry file="file://$PROJECT_DIR$/Task_1_21/main.py" />
-    <entry file="file://$PROJECT_DIR$/Task_3_21/test_2.txt" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="1134" selection-start-line="1134" selection-end-line="1134" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Task_4_21/utils.py" />
-    <entry file="file://$PROJECT_DIR$/Task_2_21/data_back.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_3_21/test_4.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_3_21/test_3.txt" />
-    <entry file="file://$PROJECT_DIR$/Task_3_21/test_5.txt" />
-    <entry file="file://$PROJECT_DIR$/../../OOPWORK/Tasks/Task_5_21/logic1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://E:/OOPWORK/Tasks/Task_5_21/logic1.py" />
     <entry file="file://$PROJECT_DIR$/Task_2_21/data_t.txt" />
     <entry file="file://$PROJECT_DIR$/Task_5_21/data_t.txt" />
     <entry file="file://$PROJECT_DIR$/Task_2_21/main.py" />
@@ -410,20 +438,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/Python/Python37/Lib/site-packages/werkzeug/serving.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="359" selection-start-line="359" selection-end-line="359" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/Python/Python37/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="1798" selection-start-line="1798" selection-end-line="1798" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/Python/Python37/Lib/site-packages/werkzeug/serving.py" />
+    <entry file="file://C:/Program Files/Python/Python37/Lib/site-packages/flask/app.py" />
     <entry file="file://$PROJECT_DIR$/Task_7_21/pages/main.html" />
     <entry file="file://$PROJECT_DIR$/Task_5_21/main1.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -462,6 +478,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Program Files/Python/Python37/Lib/codecs.py" />
+    <entry file="file://C:/Program Files/Python/Python37/Lib/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="260" selection-start-line="260" selection-end-line="260" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/seqfinder.py" />
+    <entry file="file://$PROJECT_DIR$/Task_6_21/ui/ui_lvldesign.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/ui/ui_mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-855">
+          <caret column="42" selection-start-column="42" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/game/seqformatter.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/game/logic_support.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1000">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/game/gameitem.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/ui/compile_ui.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/lvldesign.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="89" column="18" lean-forward="true" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/mainwindow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="213" column="22" selection-start-line="213" selection-start-column="22" selection-end-line="213" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/game/game.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/game/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task_6_21/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#193#220#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

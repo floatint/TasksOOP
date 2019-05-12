@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ConstructorWindow</class>
+ <widget class="QMainWindow" name="ConstructorWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>324</width>
+    <height>346</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="levelview">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>323</width>
+      <height>323</height>
+     </rect>
+    </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::SingleSelection</enum>
+    </property>
+    <property name="rowCount">
+     <number>5</number>
+    </property>
+    <property name="columnCount">
+     <number>5</number>
+    </property>
+    <attribute name="horizontalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="horizontalHeaderDefaultSectionSize">
+     <number>64</number>
+    </attribute>
+    <attribute name="horizontalHeaderMinimumSectionSize">
+     <number>64</number>
+    </attribute>
+    <attribute name="verticalHeaderVisible">
+     <bool>false</bool>
+    </attribute>
+    <attribute name="verticalHeaderDefaultSectionSize">
+     <number>64</number>
+    </attribute>
+    <attribute name="verticalHeaderMinimumSectionSize">
+     <number>64</number>
+    </attribute>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <row/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+    <column/>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="mainmenu">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>324</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="level">
+    <property name="title">
+     <string>Уровень</string>
+    </property>
+    <addaction name="save"/>
+    <addaction name="clear"/>
+   </widget>
+   <widget class="QMenu" name="add">
+    <property name="title">
+     <string>Добавить</string>
+    </property>
+    <addaction name="row"/>
+    <addaction name="col"/>
+   </widget>
+   <addaction name="level"/>
+   <addaction name="add"/>
+  </widget>
+  <action name="save">
+   <property name="text">
+    <string>Сохранить</string>
+   </property>
+  </action>
+  <action name="clear">
+   <property name="text">
+    <string>Очистить</string>
+   </property>
+  </action>
+  <action name="row">
+   <property name="text">
+    <string>Строку</string>
+   </property>
+  </action>
+  <action name="col">
+   <property name="text">
+    <string>Столбец</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
