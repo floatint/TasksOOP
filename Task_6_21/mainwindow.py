@@ -63,7 +63,8 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         if not self.gameobject.steps:
             return
         painter.setBrush(QtGui.QColor(0, 0, 0, 0))
-        painter.setPen(QtGui.QPen(QtCore.Qt.yellow, 2, QtCore.Qt.SolidLine))
+        # painter.setPen(QtGui.QPen(QtCore.Qt.yellow, 2, QtCore.Qt.SolidLine))
+        painter.setPen(QtGui.QPen(QtGui.QColor(186, 18, 155), 4, QtCore.Qt.SolidLine))
         for i in self.gameobject.steps:
             # расположен на строке
             if i[3] == 0:
@@ -167,8 +168,9 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         # получаем индекс итема под мышкой
         item_index = (e.y() // self.item_height, e.x() // self.item_width)
 
-        # без этого краш.
-        if item_index[0] < 0 or item_index[1] < 0:
+        # выход за границы поля.
+        if (item_index[0] < 0 or item_index[1] < 0) or \
+                (item_index[0] >= self.gameobject.size["height"] or item_index[1] >= self.gameobject.size["width"]):
             return
 
         if item_index == self.cur_item_index:

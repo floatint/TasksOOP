@@ -74,11 +74,13 @@ class Game:
             for x in range(len(field[0])):
                 field[y][x].value = random.choice(Game.item_values())
         # получим список готовых последовательностей
+
+
         seqs = []
         # по строкам
-        [seqs.append(i) for i in Game.fnd_seq(field, sf.RowSequenceFmt)]
+        [seqs.append(i) for i in Game.find_seqs(field, sf.RowSequenceFmt)]
         # по столбцам
-        [seqs.append(i) for i in Game.fnd_seq(list(zip(*field)), sf.ColSequenceFmt)]
+        [seqs.append(i) for i in Game.find_seqs(list(zip(*field)), sf.ColSequenceFmt)]
         # anti-random
         while len(seqs) != 0:
             for i in seqs:
@@ -90,13 +92,39 @@ class Game:
                         field[v][i[1]].value = random.choice(Game.item_values())
             seqs.clear()
             # по строкам
-            [seqs.append(i) for i in Game.fnd_seq(field, sf.RowSequenceFmt)]
+            [seqs.append(i) for i in Game.find_seqs(field, sf.RowSequenceFmt)]
             # по столбцам
-            [seqs.append(i) for i in Game.fnd_seq(list(zip(*field)), sf.ColSequenceFmt)]
+            [seqs.append(i) for i in Game.find_seqs(list(zip(*field)), sf.ColSequenceFmt)]
 
+    # release version
     # Возвращает последовательность, котрую можно удалить
     # seq = (y,x,size, direction)
     # SequenceFormatter определяет как расположена последовательность
+    @staticmethod
+    def find_seqs(field, fmt: sf.SequenceFormatter):
+        # по строкам
+        for y in range(len(field)):
+            curstep = []
+            for x in range(len(field[0])):
+                if not field[y][x].is_available:
+                    if len(curstep) >= 3:
+                        yield fmt.format(y, x, len(curstep))
+                    curstep.clear()
+                    continue
+                if len(curstep) == 0:
+                    curstep.append(field[y][x].value)
+                else:
+                    if curstep[0] == field[y][x].value:
+                        curstep.append(field[y][x].value)
+                    else:
+                        if len(curstep) >= 3:
+                            yield fmt.format(y, x, len(curstep))
+                        curstep.clear()
+                        curstep.append(field[y][x].value)
+            if len(curstep) >= 3:
+                yield fmt.format(y, len(field[0]), len(curstep))
+
+    # тоже, что и вверху, только чуть-чуть подредачить
     @staticmethod
     def fnd_seq(field, fmt: sf.SequenceFormatter):
         size = 0
@@ -149,13 +177,14 @@ class Game:
                     print(str(ex))
             newfield[y][row[0]].value = i
 
-        # заполним изменившуюся матрицу
-        self.__new_field = newfield
 
         self.__sequences = []
         # Найдем возможные ходы
-        [self.__sequences.append(i) for i in Game.fnd_seq(newfield, sf.RowSequenceFmt)]
-        [self.__sequences.append(i) for i in Game.fnd_seq(list(zip(*newfield)), sf.ColSequenceFmt)]
+        [self.__sequences.append(i) for i in Game.find_seqs(newfield, sf.RowSequenceFmt)]
+        [self.__sequences.append(i) for i in Game.find_seqs(list(zip(*newfield)), sf.ColSequenceFmt)]
+
+        # заполним изменившуюся матрицу
+        self.__new_field = newfield
 
     # сдвиг столбца
     def col_shift(self, y, x, sd: ShiftDirection):
@@ -182,13 +211,14 @@ class Game:
                 newfield[t][x].value = newfield[t-1][x].value
             newfield[col[0]][x].value = i
 
-        # заполним изменившуюся матрицу
-        self.__new_field = newfield
 
         # Найдем возможные ходы
         self.__sequences = []
-        [self.__sequences.append(i) for i in Game.fnd_seq(newfield, sf.RowSequenceFmt)]
-        [self.__sequences.append(i) for i in Game.fnd_seq(list(zip(*newfield)), sf.ColSequenceFmt)]
+        [self.__sequences.append(i) for i in Game.find_seqs(newfield, sf.RowSequenceFmt)]
+        [self.__sequences.append(i) for i in Game.find_seqs(list(zip(*newfield)), sf.ColSequenceFmt)]
+
+        # заполним изменившуюся матрицу
+        self.__new_field = newfield
 
     # пересекается ли текущая последовательность с уже удаленными
     # возможно, чтобы не пложить условия, стоило бы генерировать точки
@@ -239,9 +269,9 @@ class Game:
         # разобьем вновь образовавшиеся готовые послед.
         seqs = []
         # по строкам
-        [seqs.append(i) for i in Game.fnd_seq(self.__new_field, sf.RowSequenceFmt)]
+        [seqs.append(i) for i in Game.find_seqs(self.__new_field, sf.RowSequenceFmt)]
         # по столбцам
-        [seqs.append(i) for i in Game.fnd_seq(list(zip(*self.__new_field)), sf.ColSequenceFmt)]
+        [seqs.append(i) for i in Game.find_seqs(list(zip(*self.__new_field)), sf.ColSequenceFmt)]
         # # anti-random
         while len(seqs) != 0:
             for i in seqs:
@@ -253,9 +283,9 @@ class Game:
                         self.__new_field[v][i[1]].value = random.choice(Game.item_values())
             seqs.clear()
             # по строкам
-            [seqs.append(i) for i in Game.fnd_seq(self.__new_field, sf.RowSequenceFmt)]
+            [seqs.append(i) for i in Game.find_seqs(self.__new_field, sf.RowSequenceFmt)]
             # по столбцам
-            [seqs.append(i) for i in Game.fnd_seq(list(zip(*self.__new_field)), sf.ColSequenceFmt)]
+            [seqs.append(i) for i in Game.find_seqs(list(zip(*self.__new_field)), sf.ColSequenceFmt)]
 
         self.__sequences = None
         self.__field = self.__new_field
